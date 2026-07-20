@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CIS 7000 — Mathematical Foundations of AI Alignment</title>
+    <meta
+      name="description"
+      content="A graduate topics course on the mathematical foundations of AI alignment: preferences, information, and institutions."
+    />
+    <meta name="theme-color" content="#f7f4ed" />
+    <link rel="canonical" href="https://aaroth.github.io/cis-7000-ai-alignment/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="CIS 7000 — Mathematical Foundations of AI Alignment" />
+    <meta
+      property="og:description"
+      content="Preferences, information, and institutions: a mathematical approach to AI alignment."
+    />
+    <meta property="og:url" content="https://aaroth.github.io/cis-7000-ai-alignment/" />
+    <meta property="og:image" content="https://aaroth.github.io/cis-7000-ai-alignment/og.png" />
+    <meta property="og:image:alt" content="CIS 7000 course title with a diagram connecting preferences, information, and institutions" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CIS 7000 — Mathematical Foundations of AI Alignment" />
+    <meta
+      name="twitter:description"
+      content="Preferences, information, and institutions: a mathematical approach to AI alignment."
+    />
+    <meta name="twitter:image" content="https://aaroth.github.io/cis-7000-ai-alignment/og.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to course content</a>
+
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="wordmark" href="#top" aria-label="CIS 7000 home">
+          <span class="wordmark-code">CIS 7000</span>
+          <span class="wordmark-title">AI Alignment</span>
+        </a>
+        <nav class="site-nav" aria-label="Course navigation">
+          <a href="#overview">Overview</a>
+          <a href="#topics">Topics</a>
+          <a href="#readings">Readings</a>
+          <a class="nav-source" href="https://github.com/aaroth/cis-7000-ai-alignment" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" id="top" aria-labelledby="course-title">
+        <div class="shell hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">CIS 7000 <span aria-hidden="true">·</span> Graduate Topics Course</p>
+            <h1 id="course-title">Mathematical Foundations of <em>AI Alignment</em></h1>
+            <p class="hero-subtitle">Preferences, information, and institutions</p>
+            <p class="hero-intro">
+              How should AI systems aggregate human preferences, communicate uncertainty,
+              and act within institutions? This course develops the mathematical tools
+              needed to make those questions precise.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#topics">Explore the topics</a>
+              <a class="button button-secondary" href="#readings">Browse readings</a>
+            </div>
+            <p class="status-line"><span class="status-dot" aria-hidden="true"></span> Draft course outline <span aria-hidden="true">·</span> Reading list in progress</p>
+          </div>
+
+          <aside class="course-map" aria-label="Three lenses for the course">
+            <p class="course-map-kicker">Course map</p>
+            <ol class="course-map-list">
+              <li class="course-map-item course-map-item-green">
+                <span class="map-number">01</span>
+                <div>
+                  <h2>Preferences</h2>
+                  <p>What should be optimized?</p>
+                </div>
+              </li>
+              <li class="course-map-item course-map-item-blue">
+                <span class="map-number">02</span>
+                <div>
+                  <h2>Information</h2>
+                  <p>When should a prediction guide action?</p>
+                </div>
+              </li>
+              <li class="course-map-item course-map-item-gold">
+                <span class="map-number">03</span>
+                <div>
+                  <h2>Institutions</h2>
+                  <p>Which incentives support alignment?</p>
+                </div>
+              </li>
+            </ol>
+            <p class="map-equation" aria-hidden="true">preferences → decisions → outcomes</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section overview" id="overview" aria-labelledby="overview-title">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="section-index">00 <span>Overview</span></p>
+            <div>
+              <h2 id="overview-title">Alignment as a problem of collective decision-making</h2>
+              <p class="section-lede">
+                The course connects social choice, learning theory, game theory, information
+                economics, and interactive decision-making. Rather than treating alignment as
+                a single objective, we ask where objectives come from, what feedback can reveal,
+                and how strategic environments shape the result.
+              </p>
+            </div>
+          </div>
+
+          <div class="lenses" aria-label="Course lenses">
+            <article class="lens lens-green">
+              <p class="lens-index">I</p>
+              <h3>Preferences</h3>
+              <p>Representing, eliciting, and aggregating the values of many people.</p>
+            </article>
+            <article class="lens lens-blue">
+              <p class="lens-index">II</p>
+              <h3>Information</h3>
+              <p>Turning predictions, comparisons, and conversation into good decisions.</p>
+            </article>
+            <article class="lens lens-gold">
+              <p class="lens-index">III</p>
+              <h3>Institutions</h3>
+              <p>Designing incentives and interactions when models and providers are strategic.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section topics" id="topics" aria-labelledby="topics-title">
+        <div class="shell">
+          <div class="section-heading compact-heading">
+            <p class="section-index">01–05 <span>Topics</span></p>
+            <div>
+              <h2 id="topics-title">A working map of the course</h2>
+              <p class="section-lede">Five modules move from individual feedback to the institutions in which aligned systems must operate.</p>
+            </div>
+          </div>
+
+          <div class="topic-list">
+            <article class="topic-row">
+              <p class="topic-number">01</p>
+              <div class="topic-copy">
+                <p class="topic-lens">Preferences <span aria-hidden="true">/</span> Aggregation</p>
+                <h3>From feedback to social objectives</h3>
+                <p>Preference learning is also a problem of social choice: many judgments must become one training signal.</p>
+              </div>
+              <ul class="concept-list">
+                <li>RLHF as social aggregation</li>
+                <li>Heterogeneous preferences and cycles</li>
+                <li>Arrow’s impossibility theorem</li>
+                <li>Cardinal utility and Harsanyi aggregation</li>
+              </ul>
+            </article>
+
+            <article class="topic-row">
+              <p class="topic-number">02</p>
+              <div class="topic-copy">
+                <p class="topic-lens">Preferences <span aria-hidden="true">/</span> Learning</p>
+                <h3>What preference optimization implements</h3>
+                <p>Different learning rules encode different aggregation choices—even when they begin with the same comparisons.</p>
+              </div>
+              <ul class="concept-list">
+                <li>Scalar reward fitting and DPO</li>
+                <li>Maximal lotteries and no-regret self-play</li>
+                <li>Regularized Nash learning</li>
+                <li>Welfare distortion and identifiability</li>
+              </ul>
+            </article>
+
+            <article class="topic-row">
+              <p class="topic-number">03</p>
+              <div class="topic-copy">
+                <p class="topic-lens">Information <span aria-hidden="true">/</span> Decisions</p>
+                <h3>Decision-aligned prediction</h3>
+                <p>A prediction is useful when it supports downstream action, not merely when it scores well in isolation.</p>
+              </div>
+              <ul class="concept-list">
+                <li>Calibration and decision regret</li>
+                <li>Omniprediction and indistinguishability</li>
+                <li>Blackwell approachability</li>
+                <li>Tractable human–model agreement</li>
+              </ul>
+            </article>
+
+            <article class="topic-row">
+              <p class="topic-number">04</p>
+              <div class="topic-copy">
+                <p class="topic-lens">Information <span aria-hidden="true">/</span> Assistance</p>
+                <h3>Verification, commitment, and assistance</h3>
+                <p>Interactive protocols can expand oversight, but strategic communication changes what information is revealed.</p>
+              </div>
+              <ul class="concept-list">
+                <li>AI debate and interactive verification</li>
+                <li>Bayesian persuasion</li>
+                <li>Deference and the off-switch game</li>
+                <li>Cooperative inverse reinforcement learning</li>
+              </ul>
+            </article>
+
+            <article class="topic-row">
+              <p class="topic-number">05</p>
+              <div class="topic-copy">
+                <p class="topic-lens">Institutions <span aria-hidden="true">/</span> Competition</p>
+                <h3>Institutions and competition</h3>
+                <p>When no single system is perfectly aligned, competition and evaluation can sometimes recover aligned outcomes.</p>
+              </div>
+              <ul class="concept-list">
+                <li>Best-AI selection</li>
+                <li>Emergent alignment through competition</li>
+                <li>Equilibrium welfare guarantees</li>
+                <li>Evaluation error and assumption audits</li>
+              </ul>
+            </article>
+          </div>
+
+          <aside class="optional-modules" aria-labelledby="optional-title">
+            <p class="optional-label">Optional modules</p>
+            <h3 id="optional-title">Extensions and complementary models</h3>
+            <ul>
+              <li>Blackwell’s comparison of experiments</li>
+              <li>Cheap talk without commitment</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section readings" id="readings" aria-labelledby="readings-title">
+        <div class="shell">
+          <div class="section-heading compact-heading">
+            <p class="section-index">R <span>Readings</span></p>
+            <div>
+              <h2 id="readings-title">A starter reading list</h2>
+              <p class="section-lede">Core papers introduce the main mathematical objects. Further readings develop alternative formulations, limits, and recent directions.</p>
+            </div>
+          </div>
+
+          <div class="reading-groups">
+            <section class="reading-group" aria-labelledby="reading-group-1">
+              <div class="reading-group-heading">
+                <p>Module 01</p>
+                <h3 id="reading-group-1">Feedback and social objectives</h3>
+              </div>
+              <div class="reading-grid">
+                <article class="reading-item">
+                  <span class="reading-label label-core">Core</span>
+                  <h4><a href="https://arxiv.org/abs/1706.03741" target="_blank" rel="noopener noreferrer">Deep Reinforcement Learning from Human Preferences <span aria-hidden="true">↗</span></a></h4>
+                  <p class="citation">Christiano et al. <span>2017</span></p>
+                  <p>The modern preference-learning pipeline in its clearest early form.</p>
+                </article>
+                <article class="reading-item">
+                  <span class="reading-label label-core">Core</span>
+                  <h4><a href="https://arxiv.org/abs/2203.02155" target="_blank" rel="noopener noreferrer">Training Language Models to Follow Instructions with Human Feedback <span aria-hidden="true">↗</span></a></h4>
+                  <p class="citation">Ouyang et al. <span>2022</span></p>
+                  <p>A large-scale account of supervised instruction tuning and RLHF.</p>
+                </article>
+                <article class="reading-item">
+                  <span class="reading-label label-further">Further</span>
+                  <h4><a href="https://doi.org/10.1007/s00199-004-0556-7" target="_blank" rel="noopener noreferrer">Three Brief Proofs of Arrow’s Impossibility Theorem <span aria-hidden="true">↗</span></a></h4>
+                  <p class="citation">Geanakoplos <span>2005</span></p>
+                  <p>Compact routes into the central impossibility result for aggregation.</p>
+                </article>
+                <article class="reading-item">
+                  <span class="reading-label label-further">Further</span>
+                  <h4><a href="https://doi.org/10.1086/257678" target="_blank" rel="noopener noreferrer">Cardinal Welfare, Individualistic Ethics, and Interpersonal Comparisons of Utility <span aria-hidden="true">↗</span></a></h4>
+                  <p class="citation">Harsanyi <span>1955</span></p>
+                  <p>A canonical route from individual utility to utilitarian aggregation.</p>
+                </article>
+                <article class="reading-item">
+                  <span class="reading-label label-further">Further</span>
+                  <h4><a href="https://arxiv.org/abs/2405.14758" target="_blank" rel="noopener noreferrer">Axioms for AI Alignment from Human Feedback <span aria-hidden="true">↗</span></a></h4>
+                  <p class="citation">Ge et al. <span>2024</span></p>
+                  <p>Studies reward learning directly through the axioms of social choice.</p>
+                </article>
+              </div>
+            </section>
+
+            <section class="reading-group" aria-labelledby="reading-group-2">
+              <div class="reading-group-heading">
+                <p>Module 02</p>
+                <h3 id="reading-group-2">Preference optimization</h3>
+              </div>
+              <div class="reading-grid">
+                <article class="reading-item">
+                  <span class="reading-label label-core">Core</span>
+                  <h4><a href="https://arxiv.org/abs/2305.18290" target="_blank" rel="noopener noreferrer">Direct Preference Optimization <span aria-hidden="true">↗</span></a></h4>
+                  <p class="citation">Rafailov et al. <span>2023</span></p>
+                  <p>Recasts a regularized RLHF objective as a direct classification loss.</p>
+                </article>
+                <article class="reading-item">
+                  <span class="reading-label label-core">Core</span>
+                  <h4><a href="https://arxiv.org/abs/2401.04056" target="_blank" rel="noopener noreferrer">A Minimaximalist Approach to Reinforcement Learning from Human Feedback <span aria-hidden="true">↗</span></a></h4>
+                  <p class="citation">Swamy et al. <span>2024</span></p>
+                  <p>Uses game-theoretic optimization to avoid assuming a scalar reward.</p>
+                </article>
+                <article class="reading-item">
+                  <span class="reading-label label-further">Further</span>
+                  <h4><a href="https://arxiv.org/abs/2312.00886" target="_blank" rel="noopener noreferrer">Nash Learning from Human Feedback <span aria-hidden="true">↗</span></a></h4>
+                  <p class="citation">Munos et al. <span>2023</span></p>
+                  <p>Targets a regularized Nash equilibrium of a learned preference model.</p>
+                </article>
+                <article class="reading-item">
+                  <span class="reading-label label-further">Further</span>
+                  <h4><a href="https://arxiv.org/abs/2312.08358" target="_blank" rel="noopener noreferrer">Distributional Preference Learning <span aria-hidden="true">↗</span></a></h4>
+                  <p class="citation">Siththaranjan, Laidlaw &amp; Hadfield-Menell <span>2024</span></p>
+                  <p>Models hidden context and disagreement instead of averaging them away.</p>
+                </article>
+                <article class="reading-item">
+                  <span class="reading-label label-further">Further</span>
+                  <h4><a href="https://arxiv.org/abs/2505.23749" target="_blank" rel="noopener noreferrer">Distortion of AI Alignment <span aria-hidden="true">↗</span></a></h4>
+                  <p class="citation">Gölz, Haghtalab &amp; Yang <span>2025</span></p>
+                  <p>Quantifies the welfare loss inherent in comparison-only elicitation.</p>
+                </article>
+              </div>
+            </section>
+
+            <section class="reading-group" aria-labelledby="reading-group-3">
+              <div class="reading-group-heading">
+                <p>Module 03</p>
+                <h3 id="reading-group-3">Prediction and agreement</h3>
+              </div>
+              <div class="reading-grid">
+                <article class="reading-item">
+                  <span class="reading-label label-core">Core</span>
+                  <h4><a href="https://doi.org/10.1080/01621459.1982.10477856" target="_blank" rel="noopener noreferrer">The Well-Calibrated Bayesian <span aria-hidden="true">↗</span></a></h4>
+                  <p class="citation">Dawid <span>1982</span></p>
+                  <p>A foundational treatment of calibration and probabilistic forecasts.</p>
+                </article>
+                <article class="reading-item">
+                  <span class="reading-label label-core">Core</span>
+                  <h4><a href="https://doi.org/10.4230/LIPIcs.ITCS.2022.79" target="_blank" rel="noopener noreferrer">Omnipredictors <span aria-hidden="true">↗</span></a></h4>
+                  <p class="citation">Gopalan et al. <span>2022</span></p>
+                  <p>One predictor can support near-optimal decisions for many losses.</p>
+                </article>
+                <article class="reading-item">
+                  <span class="reading-label label-further">Further</span>
+                  <h4><a href="https://doi.org/10.2140/pjm.1956.6.1" target="_blank" rel="noopener noreferrer">An Analog of the Minimax Theorem for Vector Payoffs <span aria-hidden="true">↗</span></a></h4>
+                  <p class="citation">Blackwell <span>1956</span></p>
+                  <p>The approachability theorem behind many calibration guarantees.</p>
+                </article>
+                <article class="reading-item">
+                  <span class="reading-label label-further">Further</span>
+                  <h4><a href="https://doi.org/10.1214/aos/1176343654" target="_blank" rel="noopener noreferrer">Agreeing to Disagree <span aria-hidden="true">↗</span></a></h4>
+                  <p class="citation">Aumann <span>1976</span></p>
+                  <p>The classic common-knowledge argument for agreement among Bayesians.</p>
+                </article>
+                <article class="reading-item">
+                  <span class="reading-label label-further">Further</span>
+                  <h4><a href="https://doi.org/10.1145/3717823.3718222" target="_blank" rel="noopener noreferrer">Tractable Agreement Protocols <span aria-hidden="true">↗</span></a></h4>
+                  <p class="citation">Collina et al. <span>2025</span></p>
+                  <p>Computationally efficient protocols for human–AI agreement.</p>
+                </article>
+              </div>
+            </section>
+
+            <section class="reading-group" aria-labelledby="reading-group-4">
+              <div class="reading-group-heading">
+                <p>Module 04</p>
+                <h3 id="reading-group-4">Oversight and assistance</h3>
+              </div>
+              <div class="reading-grid">
+                <article class="reading-item">
+                  <span class="reading-label label-core">Core</span>
+                  <h4><a href="https://arxiv.org/abs/1805.00899" target="_blank" rel="noopener noreferrer">AI Safety via Debate <span aria-hidden="true">↗</span></a></h4>
+                  <p class="citation">Irving, Christiano &amp; Amodei <span>2018</span></p>
+                  <p>Proposes adversarial argument as a route to scalable oversight.</p>
+                </article>
+                <article class="reading-item">
+                  <span class="reading-label label-core">Core</span>
+                  <h4><a href="https://doi.org/10.1257/aer.101.6.2590" target="_blank" rel="noopener noreferrer">Bayesian Persuasion <span aria-hidden="true">↗</span></a></h4>
+                  <p class="citation">Kamenica &amp; Gentzkow <span>2011</span></p>
+                  <p>The foundational model of strategic information design with commitment.</p>
+                </article>
+                <article class="reading-item">
+                  <span class="reading-label label-further">Further</span>
+                  <h4><a href="https://proceedings.mlr.press/v235/brown-cohen24a.html" target="_blank" rel="noopener noreferrer">Scalable AI Safety via Doubly-Efficient Debate <span aria-hidden="true">↗</span></a></h4>
+                  <p class="citation">Brown-Cohen, Irving &amp; Piliouras <span>2024</span></p>
+                  <p>Formalizes debate protocols efficient for both judge and debaters.</p>
+                </article>
+                <article class="reading-item">
+                  <span class="reading-label label-further">Further</span>
+                  <h4><a href="https://arxiv.org/abs/1606.03137" target="_blank" rel="noopener noreferrer">Cooperative Inverse Reinforcement Learning <span aria-hidden="true">↗</span></a></h4>
+                  <p class="citation">Hadfield-Menell et al. <span>2016</span></p>
+                  <p>Treats assistance as a cooperative game with uncertain human rewards.</p>
+                </article>
+                <article class="reading-item">
+                  <span class="reading-label label-further">Further</span>
+                  <h4><a href="https://doi.org/10.24963/ijcai.2017/32" target="_blank" rel="noopener noreferrer">The Off-Switch Game <span aria-hidden="true">↗</span></a></h4>
+                  <p class="citation">Hadfield-Menell et al. <span>2017</span></p>
+                  <p>Shows how uncertainty over objectives can create incentives for deference.</p>
+                </article>
+              </div>
+            </section>
+
+            <section class="reading-group" aria-labelledby="reading-group-5">
+              <div class="reading-group-heading">
+                <p>Module 05</p>
+                <h3 id="reading-group-5">Institutions and competition</h3>
+              </div>
+              <div class="reading-grid">
+                <article class="reading-item">
+                  <span class="reading-label label-core">Core</span>
+                  <h4><a href="https://arxiv.org/abs/2509.15090" target="_blank" rel="noopener noreferrer">Emergent Alignment via Competition <span aria-hidden="true">↗</span></a></h4>
+                  <p class="citation">Collina et al. <span>2025</span></p>
+                  <p>Studies when strategic competition among misaligned systems can benefit users.</p>
+                </article>
+                <article class="reading-item">
+                  <span class="reading-label label-further">Further</span>
+                  <h4><a href="https://doi.org/10.2307/1913390" target="_blank" rel="noopener noreferrer">Strategic Information Transmission <span aria-hidden="true">↗</span></a></h4>
+                  <p class="citation">Crawford &amp; Sobel <span>1982</span></p>
+                  <p>The canonical model of informative cheap talk without commitment.</p>
+                </article>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-grid">
+        <div>
+          <p class="footer-code">CIS 7000</p>
+          <p class="footer-title">Mathematical Foundations of AI Alignment</p>
+        </div>
+        <p class="footer-note">Course materials are evolving. This page is a working outline, not a final syllabus.</p>
+        <a href="https://github.com/aaroth/cis-7000-ai-alignment" target="_blank" rel="noopener noreferrer">View source on GitHub <span aria-hidden="true">↗</span></a>
+      </div>
+    </footer>
+  </body>
+</html>
