@@ -225,6 +225,56 @@ button:focus-visible {
   line-height: 1.55;
 }
 
+.course-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  max-width: 700px;
+  margin: 2rem 0 0;
+  border-block: 1px solid var(--rule);
+}
+
+.course-detail {
+  flex: 1 1 10.5rem;
+  padding: 0.9rem 1.15rem 0.95rem 0;
+}
+
+.course-detail + .course-detail {
+  padding-left: 1.15rem;
+  border-left: 1px solid var(--rule);
+}
+
+.course-detail dt {
+  margin-bottom: 0.32rem;
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 760;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.course-detail dd {
+  margin: 0;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.course-detail a {
+  color: var(--blue);
+  text-decoration-color: transparent;
+  text-underline-offset: 0.18em;
+}
+
+.course-detail a:hover {
+  text-decoration-color: currentColor;
+}
+
+.course-detail abbr {
+  text-decoration: none;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -762,6 +812,26 @@ button:focus-visible {
 
   .hero h1 {
     font-size: clamp(3rem, 14.5vw, 5.2rem);
+  }
+
+  .course-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .course-detail {
+    padding: 0.85rem 0;
+  }
+
+  .course-detail + .course-detail {
+    padding-left: 1rem;
+  }
+
+  .course-detail:last-child {
+    grid-column: 1 / -1;
+    padding-left: 0;
+    border-top: 1px solid var(--rule);
+    border-left: 0;
   }
 
   .course-map {
