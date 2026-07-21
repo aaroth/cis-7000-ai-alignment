@@ -345,6 +345,17 @@ a:focus-visible {
   color: var(--blue);
 }
 
+.resource-label {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--blue);
+  font-family: var(--sans);
+  font-size: 0.65rem;
+  font-weight: 780;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
 .reading-meta {
   color: var(--muted);
   font-size: 0.78rem;
