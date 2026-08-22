@@ -166,8 +166,8 @@ a:focus-visible {
 
 .course-details {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  max-width: 850px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  max-width: 1050px;
   margin: 2.75rem 0 0;
   border-block: 1px solid var(--rule);
 }
