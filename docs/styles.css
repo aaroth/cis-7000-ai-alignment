@@ -200,6 +200,15 @@ a:focus-visible {
   text-decoration: none;
 }
 
+.course-location {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--slate);
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
 .section {
   padding-block: clamp(4rem, 7vw, 6.25rem);
   scroll-margin-top: 5rem;
