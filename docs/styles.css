@@ -406,6 +406,39 @@ a:focus-visible {
   font-weight: 500;
 }
 
+.lecture-list {
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lecture-list a {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 1rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--rule);
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.lecture-list a:hover {
+  color: var(--blue);
+}
+
+.lecture-number,
+.lecture-format {
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 760;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 .site-footer {
   padding-block: 2.2rem;
   color: #dce2e6;
