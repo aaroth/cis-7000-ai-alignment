@@ -412,7 +412,7 @@ a:focus-visible {
   list-style: none;
 }
 
-.lecture-list a {
+.lecture-list li {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: baseline;
@@ -422,6 +422,9 @@ a:focus-visible {
   font-family: var(--serif);
   font-size: 1rem;
   font-weight: 600;
+}
+
+.lecture-list a {
   text-decoration: none;
 }
 
@@ -437,6 +440,13 @@ a:focus-visible {
   font-weight: 760;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+.lecture-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.8rem;
+  white-space: nowrap;
 }
 
 .site-footer {
@@ -558,6 +568,16 @@ a:focus-visible {
 
   .wordmark-code {
     font-size: 0.67rem;
+  }
+
+  .lecture-list li {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.35rem 0.8rem;
+  }
+
+  .lecture-actions {
+    grid-column: 2;
+    justify-content: flex-start;
   }
 }
 
