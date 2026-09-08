@@ -449,6 +449,12 @@ a:focus-visible {
   white-space: nowrap;
 }
 
+.lecture-actions-multipart {
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.4rem;
+}
+
 .site-footer {
   padding-block: 2.2rem;
   color: #dce2e6;
@@ -578,6 +584,10 @@ a:focus-visible {
   .lecture-actions {
     grid-column: 2;
     justify-content: flex-start;
+  }
+
+  .lecture-actions-multipart {
+    align-items: flex-start;
   }
 }
 
