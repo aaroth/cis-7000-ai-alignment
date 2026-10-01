@@ -372,6 +372,19 @@ a:focus-visible {
   text-align: right;
 }
 
+.projects {
+  background: var(--paper-raised);
+  border-top: 1px solid var(--rule);
+}
+
+.project-description {
+  max-width: 76ch;
+  margin: 0.7rem 0 0;
+  color: var(--slate);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
 .future-materials {
   padding-block: 0;
   background: var(--blue-pale);
@@ -380,7 +393,7 @@ a:focus-visible {
 
 .future-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
 }
 
 .future-grid article {
